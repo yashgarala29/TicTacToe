@@ -23,13 +23,12 @@ public class Computer implements Player {
     public void play(char[][] board) {
         int position;
         position = getSmartMove(board);
-        System.out.println(playerName + " played at position " + position);
+
         if (position == -1 || !BoardValidator.isValidPosition(position, board)) {
             return;
         }
         int row = (position - 1) / 3;
         int column = (position - 1) % 3;
-        System.out.println("Invalid position, please enter again"+symbol+" row "+row+" column "+column);
         board[row][column] = symbol;
 
 
