@@ -29,6 +29,7 @@ public class Computer implements Player {
         }
         int row = (position - 1) / 3;
         int column = (position - 1) % 3;
+        System.out.println(playerName + " played at position " + position);
         board[row][column] = symbol;
 
 
